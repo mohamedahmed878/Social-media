@@ -1,0 +1,8 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext.jsx';
+
+export const useTheme = () => {
+  const ctx = useContext(ThemeContext);
+  if (!ctx) throw new Error('useTheme لازم يتستخدم جوه ThemeProvider');
+  return ctx;
+};
